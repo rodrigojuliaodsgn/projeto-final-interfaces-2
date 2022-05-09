@@ -1,6 +1,20 @@
 # SITE CONFIGURATION
-baseurl: "/type-theme"
-url: "https://rohanchandra.github.io/"
+baseurl: ""
+permalink: /:categories/:year/:title
+
+# COLLECTIONS
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:title
+
+# LAYOUT DEFAULTS
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
@@ -13,12 +27,12 @@ theme_settings:
 
   # Header and footer text
   header_text: >
-     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-     <p>Remove all header text in <code>_config.yml</code> to disable this feature.</p>
+    <p>Remove all header text in <code>_config.yml</code> to disable this feature.</p>
   header_text_feature_image:
   footer_text: >
-   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
+    Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
 
   # Icons
   rss: false
@@ -33,11 +47,11 @@ theme_settings:
   gitter:
   google_plus:
   instagram:
-  linkedin:  # Full URL
+  linkedin: # Full URL
   pinterest:
   reddit:
   soundcloud:
-  stack_exchange:  # Full URL
+  stack_exchange: # Full URL
   steam:
   tumblr:
   twitter:
@@ -47,7 +61,7 @@ theme_settings:
   # Scripts
   google_analytics: # Tracking ID, e.g. "UA-000000-01"
   disqus_shortname:
-  katex: true # Enable if using math markup
+  katex: false # Enable if using math markup
   search: false # Enable the search feature
 
   # Localization strings
@@ -83,3 +97,4 @@ plugins: [jekyll-paginate]
 exclude:
   - Gemfile
   - Gemfile.lock
+  - node_modules
