@@ -4,5 +4,7 @@
   link: /projects.html
 - name: Contacts
   link: /contacts.html
+- name: About
+  link: /about.md
 - name: Blog
   link: /blog.html

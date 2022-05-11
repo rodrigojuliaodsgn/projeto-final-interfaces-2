@@ -1,6 +1,11 @@
 # SITE CONFIGURATION
-baseurl: ""
+baseurl: "/projeto-final-interfaces-2/"
+url: "https://rodrigojuliaodsgn.github.io/"
 permalink: /:categories/:year/:title
+
+# THEME
+theme:
+  title: Type Theme
 
 # COLLECTIONS
 collections:
@@ -93,7 +98,9 @@ highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
-plugins: [jekyll-paginate]
+plugins:
+  - jekyll-paginate
+  - jekyll-postcss
 exclude:
   - Gemfile
   - Gemfile.lock
