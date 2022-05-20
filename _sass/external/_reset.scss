@@ -20,6 +20,13 @@ body {
   margin: 0;
 }
 
+// Make all sizings default to border-box
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* HTML5 display definitions
    ========================================================================== */
 

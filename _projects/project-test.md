@@ -1,6 +1,7 @@
 ---
 layout: post
 title: test_post
+excerpt: this is a project i did oh so long ago
 ---
 
 # This is a test
