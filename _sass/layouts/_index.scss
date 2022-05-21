@@ -1,3 +1,5 @@
+@use "sass:list";
+
 // Header text feature
 .call-out {
   @extend %padding-regular;
@@ -18,25 +20,35 @@
 // Project listing
 .projects,
 .posts {
+  display: flex;
+  flex-direction: column;
   gap: 24px;
   padding: 0 $padding-small;
   &__teaser {
     width: 100%;
     background-color: $foreground-color-2;
-    padding: $padding-large $padding-small 0 0;
+    position: relative;
+  }
+  &__img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  &__text {
+    z-index: 1;
+    width: 100%;
+    padding: $padding-small;
+    background-color: $foreground-color;
     p a {
       @extend .body-link;
     }
     .excerpt {
       margin-top: $padding-x-small;
     }
-    position: relative;
-  }
-  &__text {
-    z-index: 1;
-    width: fit-content;
-    padding: $padding-small $padding-small $padding-small $padding-x-small;
-    background-color: $foreground-color;
     * {
       width: fit-content;
     }
@@ -44,22 +56,20 @@
 }
 
 .projects {
-  display: grid;
-  grid-template-columns: 1fr;
   &__teaser {
+    grid-area: none;
     margin-bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     background-size: $feature-image-size;
+    min-height: 50vh;
   }
 }
 
 // Post Listing
 .posts {
-  display: flex;
   justify-content: center;
-  flex-direction: column;
 }
 
 // Pagination
@@ -82,7 +92,7 @@
   height: 90vh;
   width: 100%;
   display: grid;
-  background-color: aqua;
+  background-color: purple;
   place-items: center;
   font-size: $font-xl;
 
@@ -99,7 +109,46 @@
 }
 
 @media screen and (min-width: $desktop) {
+  // Projects Sorting
+  $projects: a, b, c, d, e, f, g;
+  @for $i from 1 through 7 {
+    .projects__teaser[data-pos="#{$i}"] {
+      grid-area: nth($projects, $i);
+    }
+  }
+
+  .projects,
+  .posts {
+    &__teaser {
+      padding: $padding-large $padding-small 0 0;
+    }
+    &__text {
+      width: fit-content;
+      padding: $padding-small $padding-small $padding-small $padding-x-small;
+    }
+  }
+
   .projects {
-    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-template-areas:
+      "a a b"
+      "c d d"
+      "e d d"
+      "f f g";
+    grid-template-columns: repeat(3, 1fr);
+
+    &__teaser {
+      min-height: none;
+    }
+  }
+
+  .posts {
+    &__teaser {
+      padding: 0;
+    }
+
+    &__text {
+      min-width: 30%;
+    }
   }
 }

@@ -3,16 +3,19 @@ layout: default
 ---
 
 <div class="home">
-  <section class="hero">
+  <section class="hero" data-scroll-section>
     <h1 class="hero__title">
       Rodrigo Julião is a <br />Digital Product Designer<br />
       based in Lisbon
     </h1>
   </section>
-  <h1 class="section__title">Selected Works</h1>
-  <section class="projects">
+  <h1 class="section__title" data-scroll-section>Selected Works</h1>
+  <section class="projects" data-scroll-section>
     {% for project in site.projects %}
-    <div class="projects__teaser">
+    <div class="projects__teaser" data-pos="{{forloop.index}}">
+      {% if project.feature-img %}
+      <img class="projects__img" src="{{project.feature-img}}" />
+      {% endif %}
       <div class="projects__text">
         <header>
           <h1>
@@ -25,8 +28,8 @@ layout: default
     </div>
     {% endfor %}
   </section>
-  <h1 class="section__title">Recent Posts</h1>
-  <section class="posts">
+  <h1 class="section__title" data-scroll-section>Recent Posts</h1>
+  <section class="posts" data-scroll-section>
     {% for post in site.posts %}
     <div class="posts__teaser">
       <div class="posts__text">
