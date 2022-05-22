@@ -14,6 +14,7 @@
   transition: background 0.7s;
 
   a {
+    font-weight: bold;
     color: $header-link-color;
     transition: color 0.7s;
   }
@@ -37,9 +38,6 @@
 
 .site-header.is-scrolling {
   background-color: rgba(0, 0, 0, 0);
-  a {
-    color: $background-color;
-  }
 }
 
 .nav {
@@ -50,7 +48,7 @@
     height: 24px;
   }
   &__list {
-    position: sticky;
+    position: fixed;
     top: $header-height;
     right: 0;
     width: 100vw;
@@ -75,6 +73,12 @@
 }
 
 @media screen and (min-width: $desktop) {
+  .site-header.is-scrolling {
+    a {
+      color: $background-color;
+    }
+  }
+
   .nav {
     &__button {
       display: none;
