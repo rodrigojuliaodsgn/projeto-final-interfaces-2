@@ -1,4 +1,5 @@
 import "./js/console-log";
 import "./js/nav-toggle";
-import { scroll } from "./js/scroll";
+import "./js/scroll";
 import "./js/gradient";
+import "./js/nav-transition";

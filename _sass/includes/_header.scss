@@ -1,7 +1,7 @@
 .site-header {
   @extend %padding-small;
   background: $foreground-color;
-  border-bottom: 1px solid $border-color;
+  border-bottom: 3px solid $foreground-color;
   display: flex;
   width: 100%;
   height: $header-height;
@@ -11,9 +11,11 @@
   top: 0;
   left: 0;
   z-index: 9;
+  transition: background 0.7s;
 
   a {
     color: $header-link-color;
+    transition: color 0.7s;
   }
 
   .avatar {
@@ -33,6 +35,13 @@
   }
 }
 
+.site-header.is-scrolling {
+  background-color: rgba(0, 0, 0, 0);
+  a {
+    color: $background-color;
+  }
+}
+
 .nav {
   position: relative;
 
@@ -41,7 +50,7 @@
     height: 24px;
   }
   &__list {
-    position: fixed;
+    position: sticky;
     top: $header-height;
     right: 0;
     width: 100vw;
@@ -78,6 +87,7 @@
     justify-content: space-between;
     height: 100%;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0);
 
     .page-link {
       font-size: 1em;
