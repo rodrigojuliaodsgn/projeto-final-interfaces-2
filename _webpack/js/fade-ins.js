@@ -11,7 +11,7 @@ animArray.forEach((p) => {
       scrollTrigger: p,
       y: 50,
       autoAlpha: 0,
-      stagger: 0.1,
+      stagger: 0.03,
       duration: 0.4,
     });
 });
