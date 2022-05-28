@@ -4,9 +4,11 @@ layout: default
 
 <article class="post">
   <section class="post__hero">
+    {% if page.feature-img %}
     <figure>
       <img class="feature-image" src="{{page.feature-img | absolute_url}}" alt="{{page.excerpt}}" />
     </figure>
+    {% endif %}
     <header>
       <h1 class="post__title">{{ page.feature-title | default: page.title }}</h1>
       {% if page.subtitle %}

@@ -28,6 +28,12 @@ article {
 .post__title {
   font-size: $font-xxl;
   margin: $padding-small 0 0;
+
+  &-centered {
+    font-size: $font-xxl;
+    margin: $padding-small 0 0;
+    text-align: center;
+  }
 }
 
 .meta {

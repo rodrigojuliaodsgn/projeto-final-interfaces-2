@@ -1,0 +1,40 @@
+.cards {
+  &__holder {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: $padding-small;
+  }
+
+  list-style: none;
+  background-color: $foreground-color;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $padding-x-small;
+
+  a {
+    font-size: $font-xl;
+    color: $brand-color;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .cards {
+    &__holder {
+      flex-direction: row;
+      justify-content: space-around;
+      margin: auto 0;
+    }
+
+    flex-direction: column;
+    min-width: 15vw;
+    height: 20vh;
+    padding-top: 2rem;
+
+    i {
+      font-size: 4em;
+    }
+  }
+}
