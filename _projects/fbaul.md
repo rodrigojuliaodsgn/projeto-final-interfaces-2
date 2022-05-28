@@ -5,10 +5,6 @@ excerpt: Rethinking FBAUL's website to meet the needs of their students.
 feature-img: assets/img/project-images/fbaul/main.webp
 ---
 
-# {{ page.title }}
-
-## {{ page.excerpt }}
-
 Tasked with overhauling the look and feel of our university's website, we started by doing extensive research and planning on what to change, for who to change it, and for what reasons.
 
 ![Redesigned Fbaul Homepage](../assets/img/project-images/fbaul/main.webp)

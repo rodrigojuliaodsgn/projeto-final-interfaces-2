@@ -3,9 +3,9 @@
   <channel>
     <title>Rodrigo Julião</title>
     <atom:link href="/projeto-final-interfaces-2/feed.xml" rel="self" type="application/rss+xml"/>
-    <link>https://rodrigojuliaodsgn.github.io//projeto-final-interfaces-2//</link>
+    <link>http://localhost:4000/projeto-final-interfaces-2//</link>
     <description>A website with blog posts and pages</description>
-    <pubDate>Mon, 23 May 2022 14:54:50 +0100</pubDate>
+    <pubDate>Sat, 28 May 2022 04:59:06 +0100</pubDate>
     
       <item>
         <title>Sample post</title>

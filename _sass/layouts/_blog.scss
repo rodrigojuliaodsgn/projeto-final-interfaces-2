@@ -1,0 +1,41 @@
+.blog {
+  .hero__title {
+    margin-top: $padding-medium;
+    font-size: 5em;
+    color: $brand-color;
+    mix-blend-mode: difference;
+    // margin-right: auto;
+    // padding-left: 20%;
+  }
+
+  h2 {
+    font-size: $font-xl;
+    font-weight: 400;
+    padding: 0 $padding-small;
+    margin: $padding-small 0 $padding-medium;
+  }
+
+  .hero {
+    height: auto;
+    canvas {
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .blog {
+    .hero {
+      min-height: 70vh;
+      &__title {
+        font-size: 12em;
+        line-height: 0.9;
+        padding-left: $padding-large;
+        padding: none;
+      }
+    }
+    .clip-circle {
+      clip-path: circle(25% at 15% 50%);
+    }
+  }
+}

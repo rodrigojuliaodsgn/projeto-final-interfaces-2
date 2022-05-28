@@ -38,6 +38,9 @@
 
 .site-header.is-scrolling {
   background-color: rgba(0, 0, 0, 0);
+  a {
+    color: $background-color;
+  }
 }
 
 .nav {
@@ -73,12 +76,6 @@
 }
 
 @media screen and (min-width: $desktop) {
-  .site-header.is-scrolling {
-    a {
-      color: $background-color;
-    }
-  }
-
   .nav {
     &__button {
       display: none;

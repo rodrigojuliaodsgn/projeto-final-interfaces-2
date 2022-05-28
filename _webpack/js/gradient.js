@@ -1,5 +1,5 @@
 var hero = document.getElementById("gradient");
-var context = hero.getContext("2d");
+var context = hero?.getContext("2d");
 
 var col = function (x, y, r, g, b) {
   context.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
@@ -29,4 +29,6 @@ var run = function () {
   window.requestAnimationFrame(run);
 };
 
-run();
+if (hero) {
+  run();
+}

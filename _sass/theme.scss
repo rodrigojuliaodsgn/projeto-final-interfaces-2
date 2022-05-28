@@ -1,17 +1,18 @@
 // External
 @import "external/reset";
 @import "external/syntax";
-@import "external/locomotive";
+// @import "external/locomotive";
 
 // Base
 @import "base/variables";
 @import "base/global";
 @import "base/utility";
 
-// Posts
+// Layouts
 @import "layouts/posts";
 @import "layouts/index";
 @import "layouts/tags";
+@import "layouts/blog";
 
 // Partials
 @import "includes/header";

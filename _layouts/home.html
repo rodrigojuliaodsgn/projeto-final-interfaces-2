@@ -3,18 +3,18 @@ layout: default
 ---
 
 <div class="home">
-  <section class="hero" data-scroll-section>
+  <section class="hero" >
     <canvas width="32" height="32" id="gradient"></canvas>
-    <h1 class="hero__title" data-scroll data-scroll-speed="3">
+    <h1 class="hero__title" >
       <a class="hero__title-name" href="{{"/about" | absolute_url}}">Rodrigo Julião</a> is a Digital Product Designer based in Lisbon.
     </h1>
   </section>
-  <h1 class="section__title" data-scroll-section>Selected Works</h1>
-  <section class="projects" data-scroll-section>
-    {% for project in site.projects %}
+  <h1 class="section__title" >Selected Works</h1>
+  <section class="projects" >
+    {% for project in site.projects reversed %}
     <div class="projects__teaser" data-pos="{{forloop.index}}">
       {% if project.feature-img %}
-      <img class="projects__img" src="{{project.feature-img}}" data-scroll data-scroll-speed="1.5" />
+      <img class="projects__img" src="{{project.feature-img}}"  />
       {% endif %}
       <div class="projects__text">
         <header>
@@ -28,8 +28,8 @@ layout: default
     </div>
     {% endfor %}
   </section>
-  <h1 class="section__title" data-scroll-section>Recent Posts <a href="{{"/blog.html" | relative_url}}">See All Posts</a></h1>
-  <section class="posts" data-scroll-section>
+  <h1 class="section__title">Recent Posts <a href="{{"/blog.html" | relative_url}}">See All Posts</a></h1>
+  <section class="posts" >
     {% for post in site.posts %}
     <div class="posts__teaser">
       <div class="posts__text">

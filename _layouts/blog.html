@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class="blog">
+  <section class="hero">
+    <canvas width="32" height="32" id="gradient" class="clip-circle"></canvas>
+    <h1 class="hero__title">Blog </br> &ensp; Posts</h1>
+  </section>
+  <h2>A collection of all my blog posts, over design and other subject matters that may interest me.</h2>
+
+  <div class="posts">
+    {% for post in site.posts %}
+    <div class="posts__teaser">
+      <div class="posts__text">
+        <header>
+          <h1>
+            <a class="post-link" href="{{ post.url | relative_url }}"> {{ post.title }} </a>
+          </h1>
+          <p class="meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+        </header>
+        <div class="excerpt">{{ post.excerpt }}</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
